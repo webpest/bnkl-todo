@@ -1,8 +1,8 @@
 import { useCallback } from "react";
-import { getToday } from "../utils";
-import TodoList from "../components/Todo/TodoList";
-import TodoHeader from "../components/Todo/TodoHeader";
-import TodoInput from "../components/Todo/TodoInput";
+import { getToday } from "utils";
+import TodoList from "components/Todo/TodoList";
+import TodoHeader from "components/Todo/TodoHeader";
+import TodoInput from "components/Todo/TodoInput";
 import { nanoid } from "nanoid";
 import { useStoreState, useStoreActions } from "../store/hooks";
 
