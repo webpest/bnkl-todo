@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 type Props = {
   colors: string[];
   onChange: (tag: string) => void;
+  selected: string;
 };
 
-const Tags = ({ colors, onChange }: Props) => {
+const Tags = ({ colors, onChange, selected }: Props) => {
   const [tag, setTag] = useState<string | null>(null);
 
   useEffect(() => {
@@ -13,15 +14,15 @@ const Tags = ({ colors, onChange }: Props) => {
   }, [tag, onChange]);
 
   const handleToggle = (color: string): void => {
-    tag === color ? setTag("") : setTag(color);
+    selected === color ? setTag("") : setTag(color);
   };
 
   return (
     <>
       {colors.map((color, i) => {
         const active =
-          color === tag
-            ? "outline outline-[3px] outline-[#F5F5F5]"
+          color === selected
+            ? "outline outline-[3px] outline-[#DEDEDE]"
             : "outline-none";
 
         return (

@@ -1,4 +1,5 @@
 import Tags from "../Tag/Tags";
+import { useStoreState } from "../../store/hooks";
 
 type Props = {
   today: string;
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const TodoHeader = ({ today, count, handleTagChange, filtering }: Props) => {
+  const filterBy = useStoreState((state) => state.filterBy);
   return (
     <>
       <div className="bg-red py-[31px] text-white text-center">
@@ -20,7 +22,11 @@ const TodoHeader = ({ today, count, handleTagChange, filtering }: Props) => {
             : `Filtering and showing ${count} tasks`}
         </span>
         <span>
-          <Tags colors={["#86DA83", "#8F83DA"]} onChange={handleTagChange} />
+          <Tags
+            colors={["#86DA83", "#8F83DA"]}
+            selected={filterBy}
+            onChange={handleTagChange}
+          />
         </span>
       </div>
     </>

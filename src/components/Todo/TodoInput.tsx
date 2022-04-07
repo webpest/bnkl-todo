@@ -37,7 +37,11 @@ const TodoInput = ({ handleAddTodo }: Props) => {
           onChange={handleInputChange}
           className="placeholder:text-[#B3B3B3] outline-none flex-grow mx-5 p-0"
         />
-        <Tags colors={["#86DA83", "#8F83DA"]} onChange={handleTagChange} />
+        <Tags
+          colors={["#86DA83", "#8F83DA"]}
+          selected={tag}
+          onChange={handleTagChange}
+        />
       </form>
     </div>
   );

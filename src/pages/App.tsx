@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import { getToday } from "../utils";
 import TodoList from "../components/Todo/TodoList";
 import TodoHeader from "../components/Todo/TodoHeader";
@@ -20,10 +20,6 @@ const App = () => {
   const handleAddTodo = (task: string, tag: string): void => {
     addTodo({ id: nanoid(), text: task, done: false, tag: tag });
   };
-
-  useEffect(() => {
-    setFilterBy(filterBy);
-  }, [setFilterBy, filterBy]);
 
   const handleTagChange = useCallback(
     (color: string) => {
