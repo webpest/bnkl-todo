@@ -1,6 +1,6 @@
-import AddIcon from "../../assets/add-icon.svg";
+import AddIcon from "assets/add-icon.svg";
 import { useCallback, useState } from "react";
-import Tags from "../Tag/Tags";
+import Tags from "components/Tag/Tags";
 
 type Props = {
   handleAddTodo: (text: string, tag: string) => void;

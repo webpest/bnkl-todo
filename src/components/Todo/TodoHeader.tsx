@@ -1,5 +1,5 @@
-import Tags from "../Tag/Tags";
-import { useStoreState } from "../../store/hooks";
+import Tags from "components/Tag/Tags";
+import { useStoreState } from "store/hooks";
 
 type Props = {
   today: string;

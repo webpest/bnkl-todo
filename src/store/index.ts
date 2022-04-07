@@ -1,4 +1,4 @@
-import { Todo } from "../types/todo";
+import { Todo } from "types/todo";
 
 import { createStore, action, persist, Action } from "easy-peasy";
 
