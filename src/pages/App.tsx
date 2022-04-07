@@ -23,7 +23,6 @@ const App = () => {
 
   const handleTagChange = useCallback(
     (color: string) => {
-      console.log(color, "here");
       setFilterBy(color);
     },
     [setFilterBy]
